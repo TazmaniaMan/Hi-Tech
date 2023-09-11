@@ -1,0 +1,53 @@
+<ion-header>
+   <ion-toolbar>
+    <ion-title>Listar Objetos</ion-title>
+    <ion-button expand="full" (click)="volverAlMenuPrincipal()">Volver al Menú Principal</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content id="main-content">
+  <ion-list>
+    <!-- Filtros de selección -->
+    <ion-item>
+      <ion-label>Categoría</ion-label>
+      <ion-select [(ngModel)]= "categoriaSeleccionada">
+        <ion-select-option value="Categoría1">Accesorios Exterior</ion-select-option>
+        <ion-select-option value="Categoría2">Accesorios Interior</ion-select-option>
+        <ion-select-option value="Categoría3">Accesorios Combustible</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Precio máximo</ion-label>
+      <ion-input type="number" [(ngModel)]= "precioMaximo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha de Lanzamiento</ion-label>
+      <ion-input type="date" [(ngModel)]= "fechaLanzamiento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Descuento</ion-label>
+      <ion-toggle [(ngModel)]= "tieneDescuento"></ion-toggle>
+    </ion-item>
+
+    <!-- Botón para aplicar los filtros -->
+    <ion-button expand="full" (click)="aplicarFiltros()">Aplicar Filtros</ion-button>
+  </ion-list>
+
+  <!-- Lista de objetos filtrados -->
+  <ion-list *ngIf="objetosFiltrados.length > 0">
+    <ion-item *ngFor="let objeto of objetosFiltrados">
+      <!-- Aquí muestra la información de cada objeto -->
+      {{ objeto.nombre }} - {{ objeto.precio }}
+    </ion-item>
+  </ion-list>
+
+  <!-- Mensaje si no hay objetos filtrados -->
+  <div id ="nobusqueda"*ngIf="objetosFiltrados.length === 0">
+    No se encontraron objetos que cumplan con los filtros seleccionados.
+  </div>
+</ion-content>
+

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Actualizar Objeto</ion-title>
+    <ion-button expand="full" (click)="volverAlMenuPrincipal()">Volver al Menú Principal</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main-content">
+  <!-- Selección de opciones -->
+  <ion-item>
+    <ion-label>Categoría</ion-label>
+    <ion-select [(ngModel)]="selectedCategory">
+      <!-- Opciones de categoría -->
+      <ion-select-option value="categoria1">Categoría 1</ion-select-option>
+      <ion-select-option value="categoria2">Categoría 2</ion-select-option>
+      <!-- Agrega más opciones según tus necesidades -->
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Precio</ion-label>
+    <ion-input type="number" [(ngModel)]="precio"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fecha de Lanzamiento</ion-label>
+    <ion-input type="date" [(ngModel)]="fechaLanzamiento"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Descuento</ion-label>
+    <ion-input type="number" [(ngModel)]="descuento"></ion-input>
+  </ion-item>
+
+  <div id ="nobusqueda"*ngIf="objetosFiltrados.length === 0">
+    No se encontraron objetos que cumplan con los filtros seleccionados.
+  </div>
+
+  <!-- Botones de acción -->
+  <ion-button expand="full" (click)="modificarObjeto()">Modificar</ion-button>
+  <ion-button expand="full" (click)="guardarObjeto()">Guardar</ion-button>
+  <ion-button expand="full" (click)="publicarObjeto()">Publicar</ion-button>
+</ion-content>

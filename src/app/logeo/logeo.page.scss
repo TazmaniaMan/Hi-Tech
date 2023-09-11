@@ -1,0 +1,22 @@
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 20vh; /* O ajusta la altura según tus necesidades */
+  }
+  
+  .centered-image {
+    max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 100px; /* Ajusta el tamaño máximo de la imagen */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; /* O ajusta la altura según tus necesidades */
+  }
+  
+  .custom-labelogeo .label {
+    font-size: 40px; /* Tamaño de fuente personalizado (ajusta según tus preferencias) */
+  }

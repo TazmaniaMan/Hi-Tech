@@ -1,0 +1,28 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: white; /* Fondo blanco */
+}
+
+
+.control-bar-open {
+  width: 100%;
+}
+
+ion-list {
+  background-color: white; /* Fondo qlo que no funciono (Arreglar) */
+}
+
+ion-item {
+  --inner-padding-start: 20px; /* Espacio a la izquierda del icono */
+}
+
+/* Cambia la alineación del título a la izquierda */
+ion-title {
+  text-align: left;
+}
+
+

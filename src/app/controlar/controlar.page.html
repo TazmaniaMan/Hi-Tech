@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="./controlar.page.scss">
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Hi-Tech Repuestos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main">
+
+  <ion-card>
+    <img alt="Exteriorauto" src="https://siempreauto.com/wp-content/uploads/sites/9/2021/05/auto-3265872_1280.jpg?w=2600" />
+    <ion-card-header>
+      <ion-card-title>Accesorios Exterior</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Encuentre los mejores repuestos y accesorios para el exterior de tu auto, para que luzca genial.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img alt="Interiorauto" src="https://queautocompro.com/wp-content/uploads/2020/06/nissansentra2020interior.jpg" />
+    <ion-card-header>
+      <ion-card-title>Accesorios Interior</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Encuentre los mejores repuestos y accesorios para el interior de tu auto, para que luzca genial, por dentro como por fuera.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img alt="combustibles" src="https://i0.wp.com/www.radiosago.cl/wp-content/uploads/2021/02/Combustible-1140x600-1.jpg?fit=1140%2C600&ssl=1" />
+    <ion-card-header>
+      <ion-card-title>Sistema de combustibles</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Encuentre los mejores repuestos y mejoras para sistema de combistible de tu auto.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <!-- Botón para abrir la barra de control -->
+  <ion-button expand="full" (click)="toggleControlBar()">Opciones administrador</ion-button>
+
+  <!-- "Barra magica" (inicialmente ocultada(no funciona xd)) -->
+  <div [ngClass]="{'control-bar-open': isControlBarOpen}">
+    <ion-list lines="none">
+      <!-- Botones de las cosas estas-->
+      <ion-item button (click)="agregar()">
+        <ion-icon name="add"></ion-icon>
+        <ion-label>Agregar</ion-label>
+      </ion-item>
+      <ion-item button (click)="listar()">
+        <ion-icon name="list"></ion-icon>
+        <ion-label>Listar</ion-label>
+      </ion-item>
+      <ion-item button (click)="actualizar()">
+        <ion-icon name="create"></ion-icon>
+        <ion-label>Actualizar</ion-label>
+      </ion-item>
+      <ion-item button (click)="eliminar()">
+        <ion-icon name="trash"></ion-icon>
+        <ion-label>Eliminar</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+ </ion-content>
+
+

@@ -1,0 +1,24 @@
+
+#main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Estilos para la lista de objetos */
+ion-list {
+  max-width: 80%;
+}
+
+/* Estilos para el botón de aplicar filtros */
+ion-button {
+  margin-top: 20px;
+}
+
+#nobusqueda {
+  margin: 0 auto;
+  margin-top: 20px;
+
+}

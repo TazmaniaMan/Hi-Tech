@@ -1,0 +1,32 @@
+// para centrar el contenido (no funciona) //
+.main-content {
+  display: center;
+}
+
+
+ion-list {
+  max-width: 80%;
+}
+
+
+ion-item {
+  --inner-padding-start: 10px;
+}
+
+
+ion-item.button-item {
+  cursor: pointer; // Cambia el cursor al pasar sobre el botón */
+  color: var(--ion-color-primary); // Color primario de algo (nose, pero si no lo pongo, no toma xd) */
+  text-decoration: underline;
+}
+
+// para la imagen, pero no toma xd
+ion-img {
+  max-width: 100%; // Ancho máximo de la image
+  margin-top: 10px; // margen (por los loles)
+}
+
+// boton (no tiene estilos (creo))
+ion-button {
+  margin-top: 20px;
+}

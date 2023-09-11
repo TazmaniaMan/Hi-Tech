@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Objeto</ion-title>
+    <ion-button expand="full" (click)="volverAlMenuPrincipal()">Volver al Menú Principal</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main-content">
+  <ion-list>
+    <!-- Campo para el nombre del objeto -->
+    <ion-item>
+      <ion-label position="floating">Nombre del Objeto</ion-label>
+      <ion-input type="text" [(ngModel)]="nombreObjeto"></ion-input>
+    </ion-item>
+
+    <!-- Campo para la descripción del objeto -->
+    <ion-item>
+      <ion-label position="floating">Descripción del Objeto</ion-label>
+      <ion-textarea [(ngModel)]="descripcionObjeto"></ion-textarea>
+    </ion-item>
+
+    <!-- Campo para el precio del objeto -->
+    <ion-item>
+      <ion-label position="floating">Precio del Objeto</ion-label>
+      <ion-input type="number" [(ngModel)]="precioObjeto"></ion-input>
+    </ion-item>
+
+    <!-- Botón para seleccionar una imagen -->
+    <ion-item button (click)="seleccionarImagen()">
+      <ion-label>Seleccionar Imagen</ion-label>
+    </ion-item>
+
+
+    <!-- Botón para agregar el objeto -->
+    <ion-button expand="full" (click)="agregarObjeto()">Agregar Objeto</ion-button>
+  </ion-list>
+</ion-content>
